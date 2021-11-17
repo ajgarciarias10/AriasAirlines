@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.izv.ad.consultaagendaad.MainActivity">
+    <item android:title="Mi cuenta" >
+        <menu >
+            <item android:title="Configuración de privacidad" />
+            <item android:title="Mis documentos de viaje" />
+            <item android:title="Mis compañeros de viaje" />
+        </menu>
+    </item>
+    <item android:title="Mis viajes" />
+    <item android:title="Tarjetas de embarque" />
+    <item android:title="Información sobre el vuelo" />
+    <item android:title="Info actualizada" />
+    <item android:title="Vales de regalo" />
+    <item android:title="Revista de vuelo" />
+    <item android:title="Términos y condiciones" />
+    <item android:title="Centro de ayuda" />
+    <item android:title="Contactar con la aerolínea" />
+    <item android:title="Contactar con la aerolínea" />
+    <item android:title="Configuración de privacidad" />
+</menu>
