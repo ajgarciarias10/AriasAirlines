@@ -1,7 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string name="app_name">AriasAirlines</string>
-    <string name="tv_arlines" tools:ignore="MissingTranslation">AriasAirlines</string>
-    <string name="img_aerolineasArias" translatable="false" />
+    <string name="tv_arlines">AriasAirlines</string>
     <string name="et_from">From</string>
     <string name="et_to">To</string>
     <string name="ch_ida">Departure</string>
@@ -23,15 +23,10 @@
     <string name="check_cena">Dinner</string>
     <string name="check_Extra">Extra Meal</string>
     <string name="bt_compramela">Buy</string>
-    <string name="img_bt" translatable="false" />
-    <string name="action_settings" translatable="false">action_settings</string>
     <string name="si">Yes</string>
     <string name="no">No</string>
-    <string name="tv_Precio" translatable="false" />
     <string name="tv_Coste">BILL</string>
     <string name="tv_ListaDelViaje">List of Preferences</string>
     <string name="bt_aceptar">Accept</string>
-    <string name="ht_date" tools:ignore="MissingTranslation">Date</string>
-    <!-- TODO: Remove or change this placeholder text -->
-
+    <string name="ht_date">Date</string>
 </resources>

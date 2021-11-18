@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AriasAirlines</string>
+    <string name="et_from">Desde</string>
+    <string name="et_to">Hacia</string>
+    <string name="ch_ida">Ida</string>
+    <string name="check_id_vuelta">Ida/Vuelta</string>
+    <string name="et_nombre">Nombre</string>
+    <string name="et_apellidos">Apellidos</string>
+    <string name="et_direccion">Dirección</string>
+    <string name="et_Phone">Teléfono</string>
+    <string name="et_email">Email</string>
+    <string name="rd_movilidad">Movilidad reducida</string>
+    <string name="sw_id_vuelt">Ida/Vuelta</string>
+    <string name="check_primeraclase">Primera Clase</string>
+    <string name="check_asientoventanilla">Ventanilla</string>
+    <string name="check_mascota">Mascota</string>
+    <string name="tv_eleccion">Preferencia Pasajero</string>
+    <string name="tv_comida">Preferencia de Comida</string>
+    <string name="check_breakfast">Desayuno</string>
+    <string name="check_comida">Almuerzo</string>
+    <string name="check_cena">Cena</string>
+    <string name="check_Extra">Extra Meal</string>
+    <string name="bt_compramela">Comprar</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="tv_Coste">PRECIO DEL VIAJE</string>
+    <string name="tv_ListaDelViaje">Lista para tu viaje</string>
+    <string name="bt_aceptar">ACEPTAR</string>
+</resources>

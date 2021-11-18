@@ -22,8 +22,10 @@
 
     <ImageButton
         android:id="@+id/img_bt"
-        android:layout_width="113dp"
-        android:layout_height="84dp"
+        style="@style/fontFamili"
+        android:layout_width="111dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
         android:contentDescription="@string/img_bt"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,8 +38,9 @@
 
     <Button
         android:id="@+id/bt_aceptar"
+        style="@style/fontFamili"
         android:layout_width="113dp"
-        android:layout_height="84dp"
+        android:layout_height="0dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/bt_aceptar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,8 +66,8 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="418dp"
-        android:layout_height="202dp"
+        android:layout_width="413dp"
+        android:layout_height="315dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,6 +82,7 @@
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/fontFamili"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-smallcaps"
@@ -89,8 +93,9 @@
 
             <TextView
                 android:id="@+id/tv_ListaDeViaje"
-                android:layout_width="411dp"
-                android:layout_height="251dp"
+                style="@style/fontFamili"
+                android:layout_width="match_parent"
+                android:layout_height="291dp"
                 android:gravity="center" />
         </LinearLayout>
     </ScrollView>
