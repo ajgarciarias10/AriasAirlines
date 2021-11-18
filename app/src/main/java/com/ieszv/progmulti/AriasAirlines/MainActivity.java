@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,7 +28,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-        //region  INICIALIZACI0N DE LAS VARIABLES A USAR EN EL EJERCICIO
+    //region  INICIALIZACI0N DE LAS VARIABLES A USAR EN EL EJERCICIO
     private Button botonNoVip,Desayuno;
     RadioButton MovilidadReducida;
     private  ImageButton botonVip;
@@ -39,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
     CheckBox checkCena,checkDesayuno,check_Comida,check_Extra,checkPrimeraClase,check_mascota,check_asiento;
     Switch IdaoVuelta;
     Toast toast;
-       public static ArrayList<Factura> ListaFacturas = new ArrayList<>();
-       //endregion
-     //region ONCREATE
+    public static ArrayList<Factura> ListaFacturas = new ArrayList<>();//Creamos el Arraylist de Facturas
+    //endregion
+    //region ONCREATE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,9 +134,9 @@ public class MainActivity extends AppCompatActivity {
                 if(!CrearArrayVip()){
                     toast.makeText(getApplicationContext(),"Rellena todos los campos con Interrogacion",Toast.LENGTH_SHORT).show();
                 }else{
-                        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                        startActivity(intent);
-                    }
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    startActivity(intent);
+                }
 
 
             }
@@ -147,6 +150,11 @@ public class MainActivity extends AppCompatActivity {
     }
     //endregion
     //region Metodos de checkeo
+
+    /**
+     *
+     * Los siguientes metodos esCheck mira si esta checkeado la casilla de verificacion y en el caso de que este verificada añadira su precio y si no 0
+     */
     public double esCheckDesayuno(){
         if(checkDesayuno.isChecked() == true) {
             precioBreakfast = 10;
@@ -185,9 +193,9 @@ public class MainActivity extends AppCompatActivity {
             precioExtraMeal = 5;
             return  precioExtraMeal;
         }
-       else{
+        else{
             precioExtraMeal = 0;
-           return precioExtraMeal;
+            return precioExtraMeal;
         }
     }
     public double checkPrimeraClase(){
@@ -209,47 +217,53 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-      public double checkAsiento(){
-          if(check_asiento.isChecked()== true){
-              precioVentanilla = 12;
-              return  precioVentanilla;
-          }
-          else{
-              precioVentanilla=0;
-              return precioVentanilla;
-          }
+    public double checkAsiento(){
+        if(check_asiento.isChecked()== true){
+            precioVentanilla = 12;
+            return  precioVentanilla;
+        }
+        else{
+            precioVentanilla=0;
+            return precioVentanilla;
+        }
 
 
-      }
-      public double dMovilidadReducida(){
-          if(MovilidadReducida.isChecked() == true){
-              precioMovilidadReducida = -44;
-              return precioMovilidadReducida;
-          }
-          else{
-              precioMovilidadReducida=0;
-              return precioMovilidadReducida;
+    }
+    public double dMovilidadReducida(){
+        if(MovilidadReducida.isChecked() == true){
+            precioMovilidadReducida = -44;
+            return precioMovilidadReducida;
+        }
+        else{
+            precioMovilidadReducida=0;
+            return precioMovilidadReducida;
 
-          }
+        }
 
-      }
-      public boolean estaVacionNombre(){
-          name = String.valueOf(et_name.getText());
-          if(name.isEmpty()){
-              et_name.setError("Error Ha escrito el campo name vacio");
-              return true;
-          }
-          else{
-              return false;
+    }
+    public boolean estaVacionNombre(){
+        name = String.valueOf(et_name.getText());
+        if(name.isEmpty()){
+            et_name.setError("Error Ha escrito el campo name vacio");
+            return true;
+        }
+        else{
+            return false;
 
-          }
+        }
 
-      }
+
+    }
+
+    /**
+     *
+     * Los siguientes metodos mira si estan vacios los campos de textos que estoy comprobando y le envian Error en caso de que esten vacios
+     */
     public boolean estaVacionApellido(){
         surname = String.valueOf(et_surname.getText());
         if(surname.isEmpty()){
-           // toast.makeText(getApplicationContext(),"Error Ha escrito el campo Apellido vacio = "+ surname,Toast.LENGTH_SHORT).show();
-            et_surname.setError("Error Ha escrito el campo Apellido vacio");
+            // toast.makeText(getApplicationContext(),"Error Ha escrito el campo Apellido vacio = "+ surname,Toast.LENGTH_SHORT).show();
+            et_surname.setError("Error Ha escrito el campo Apellido vacio"); // Mensaje de error
             return true;
         }
         else{
@@ -258,11 +272,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     public boolean estaVacionDireccion(){
         direccion = String.valueOf(et_direccion.getText());
         if(direccion.isEmpty()){
-           // toast.makeText(getApplicationContext(),"Error Ha escrito el campo Direccion vacio = "+ direccion,Toast.LENGTH_SHORT).show();
-            et_direccion.setError("Error Ha escrito el campo Direccion vacio");
+            // toast.makeText(getApplicationContext(),"Error Ha escrito el campo Direccion vacio = "+ direccion,Toast.LENGTH_SHORT).show();
+            et_direccion.setError("Error Ha escrito el campo Direccion vacio");// Mensaje de error
             return true;
         }
         else{
@@ -275,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
         email = String.valueOf(et_email.getText());
         if(email.isEmpty()){
             //toast.makeText(getApplicationContext(),"Error Ha escrito el campo Email vacio = "+ email,Toast.LENGTH_SHORT).show();
-            et_email.setError("Error Ha escrito el campo Email vacio");
+            et_email.setError("Error Ha escrito el campo Email vacio");// Mensaje de error
             return true;
         }
         else{
@@ -289,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(telefonoEnCadena.isEmpty()){
             //toast.makeText(getApplicationContext(),"Error Ha escrito el campo Telefono  vacio = "+ telefonoEnCadena,Toast.LENGTH_SHORT).show();
-            et_telefono.setError("Error Ha escrito el campo Telefono  vacio ");
+            et_telefono.setError("Error Ha escrito el campo Telefono  vacio ");// Mensaje de error
 
             return true;
         }
@@ -302,8 +317,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean estaFechaVacia(){
         date = String.valueOf(et_date.getText());
         if(date.isEmpty()){
-           // toast.makeText(getApplicationContext(),"Error Ha escrito el campo Fecha vacio = "+ date,Toast.LENGTH_SHORT).show();
-            et_date.setError("Error Ha escrito el campo Fecha vacio ");
+            // toast.makeText(getApplicationContext(),"Error Ha escrito el campo Fecha vacio = "+ date,Toast.LENGTH_SHORT).show();
+            et_date.setError("Error Ha escrito el campo Fecha vacio ");// Mensaje de error
             return true;
         }
         else{
@@ -315,22 +330,22 @@ public class MainActivity extends AppCompatActivity {
 //endregion
 
 
-    //region metodo deCreacion de un array en caso de que sea vip
+    //region metodo deCreacion de un array en caso de que sea vip se pone el precioVip a 43 y utiliza los metodos de checkeo vacio
     public boolean CrearArrayVip(){
 
-          from= String.valueOf(et_from.getText());
-          to = String.valueOf(et_to.getText());
-          estaFechaVacia();
-          priceOfThreeAsciis =  idavuelta(from,to,date);
+        from= String.valueOf(et_from.getText());
+        to = String.valueOf(et_to.getText());
+        estaFechaVacia();
+        priceOfThreeAsciis =  idavuelta(from,to,date);
 
-          dMovilidadReducida();
-          checkAsiento();
-          checkMascota();
-          checkPrimeraClase();
-          checkExtra();
-          esCheckComida();
-          esCheckCena();
-          esCheckDesayuno();
+        dMovilidadReducida();
+        checkAsiento();
+        checkMascota();
+        checkPrimeraClase();
+        checkExtra();
+        esCheckComida();
+        esCheckCena();
+        esCheckDesayuno();
         if(estaVacionNombre() || estaVacionApellido() || estaVacionDireccion() || estaVacionTelefono()|| estaVacioEmail()){
             return  false;
 
@@ -343,11 +358,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-      }
-      //endregion
+    }
+    //endregion
 
 
-    //region metodo deCreacion de un array en caso de que  no sea vip
+    //region metodo deCreacion de un array en caso de que  no sea vip se pone el precioVip a  0 y utiliza los metodos de checkeo vacio
     public boolean CrearArrayNoVip(){
         //HACEMOS LOS GETTEXT DE CADA CAMPO
         from= String.valueOf(et_from.getText());
@@ -377,7 +392,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     //endregion
- //region Metodo que te devuelve el total de la ida la vuelta
+    //region Metodo que te devuelve el total de la ida la vuelta + la fecha
     private double idavuelta(String cadena1 ,String cadena2,String cadena3) {
         IdaoVuelta = findViewById(R.id.sw_id_vuelt);
         precioIdaVuelta =  FuncionesParaEsteTrabajo.funcionAscii(cadena1) + FuncionesParaEsteTrabajo.funcionAscii(cadena2) + FuncionesParaEsteTrabajo.funcionAscii(cadena3);
@@ -391,12 +406,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //endregion
-
-    //region INflando el menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
         return true;
+    }
+    //region Funcionalidad  Algunas cosas del menuMenu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.it_docviajes:
+                String url2="http://www.exteriores.gob.es/portal/es/serviciosalciudadano/siviajasalextranjero/paginas/quedebohacerantesdeviajaralextranjero.aspx";
+                Intent intent2 = new Intent(Intent.ACTION_VIEW);
+                intent2.setData(Uri.parse(url2));
+                startActivity(intent2);
+                return true;
+            case R.id.it_cviaje:
+                String url3= "http://lavueltaalmundo.net/companeros-de-viaje";
+                Intent intent3 = new Intent(Intent.ACTION_VIEW);
+                intent3.setData(Uri.parse(url3));
+                startActivity(intent3);
+                return true;
+            case R.id.it_aerolinea:
+                Toast.makeText(getApplicationContext(),"Si necesita algo llame al 9580742331", Toast.LENGTH_SHORT);
+                return  true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
     //endregion
 

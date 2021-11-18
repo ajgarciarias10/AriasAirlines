@@ -6,13 +6,19 @@
     <item android:title="Mi cuenta" >
         <menu >
             <item android:title="Configuración de privacidad" />
-            <item android:title="Mis documentos de viaje" />
-            <item android:title="Mis compañeros de viaje" />
+            <item
+                android:id="@+id/it_docviajes"
+                android:title="Mis documentos de viaje" />
+            <item
+                android:id="@+id/it_cviaje"
+                android:title="Mis compañeros de viaje" />
         </menu>
     </item>
     <item android:title="Mis viajes" />
     <item android:title="Tarjetas de embarque" />
-    <item android:title="Información sobre el vuelo" />
+    <item
+        android:id="@+id/it_aerolinea"
+        android:title="Información sobre el vuelo" />
     <item android:title="Info actualizada" />
     <item android:title="Vales de regalo" />
     <item android:title="Revista de vuelo" />

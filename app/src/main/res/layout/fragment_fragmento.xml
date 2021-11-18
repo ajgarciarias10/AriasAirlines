@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecFragmento">
+    tools:context=".INTENTODEPONERFRAGMENTS.SecFragmento">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView5"
-        android:name="com.ieszv.progmulti.AriasAirlines.SecFragmento"
+        android:name="com.ieszv.progmulti.AriasAirlines.INTENTODEPONERFRAGMENTS.SecFragmento"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +19,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView6"
-        android:name="com.ieszv.progmulti.AriasAirlines.ThirdFragmento"
+        android:name="com.ieszv.progmulti.AriasAirlines.INTENTODEPONERFRAGMENTS.ThirdFragmento"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -53,7 +53,7 @@ public class SecondActivity extends AppCompatActivity {
     }
     //endregion
 
-    //region sacar el precio De La Factura sacando los precios que se crean en a actividad Anterior
+    //region sacar el precio De La Factura sacando los precios que se crean en la actividad Anterior
     public String facturaCadenita(){
     double factura = 0;
 

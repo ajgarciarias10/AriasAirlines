@@ -1,5 +1,8 @@
 package com.ieszv.progmulti.AriasAirlines;
 
+/**
+ * Funcion para ver pasar a ascii una cadena
+ */
 public class FuncionesParaEsteTrabajo {
     public static int funcionAscii(String cadena) {
 
@@ -8,7 +11,7 @@ public class FuncionesParaEsteTrabajo {
             contador = contador + cadena.codePointAt(i);
 
         }
-        resultado = contador % 99;
+        resultado = contador % 99;//Hacemos el modulo para reducir lo pasado a Ascii
         return resultado;
     }
 }
