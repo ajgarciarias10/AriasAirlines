@@ -7,7 +7,7 @@ This program makes the functionality  of an airline. At first you can see that y
 ![ListOfPreferences](https://user-images.githubusercontent.com/73525861/142480499-cdd4d9b1-a218-47ea-8b64-578d74e25e72.png)
 --Fragment--
 We have been  improving a fragment with two of the display that you're going to have,  but technically talking  the fragment it's not working so only I can show you  while I´m fixing it , how it will be.
-![Fragments](https://user-images.githubusercontent.com/73525861/142481779-f07a2df5-bcb0-4f06-960f-39fae12cc208.png)
+![Fragments](https://user-images.githubusercontent.com/73525861/142481779-f07a2df5-bcb0-4f06-960f-39fae12cc208.png).
 --Avaliable Languages--.
 ![Idiomas](https://user-images.githubusercontent.com/73525861/142482086-e9dafb9e-0a3c-4cab-a343-8556d4858fad.jpg)
 
