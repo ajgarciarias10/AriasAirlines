@@ -5,8 +5,8 @@ This program makes the functionality  of an airline. At first you can see that y
 ![BuySection](https://user-images.githubusercontent.com/73525861/142480513-6eda482e-a52b-4462-ac55-a34d9a33c53a.png)
 ![PriceOfTheTravel](https://user-images.githubusercontent.com/73525861/142480504-632efb40-c156-4a7c-bc13-4495ec98267f.png)
 ![ListOfPreferences](https://user-images.githubusercontent.com/73525861/142480499-cdd4d9b1-a218-47ea-8b64-578d74e25e72.png)
---Avaliable Idioms--
-
+--Avaliable Languages--
+![Idiomas](https://user-images.githubusercontent.com/73525861/142482086-e9dafb9e-0a3c-4cab-a343-8556d4858fad.jpg)
 
 
 --Fragment--
